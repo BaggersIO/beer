@@ -9,7 +9,17 @@ const GLASS = {
 };
 
 paper
-  .rect(50, 150, 300, 400, 10, 10).attr(GLASS);
+  .rect(50, 150, 300, 400, 10, 10)
+  .attr(GLASS);
+
+// handle
+const HANDLE = Object.assign({}, GLASS, {
+  fill: 'rgba(255, 255, 255, 0.0)'
+});
+
+paper
+  .rect(340, 250, 125, 200, 50, 50)
+  .attr(HANDLE);
 
 // beer
 const LIQUID = paper.gradient('l(0, 0, 1, 1)#EFC84A-#EFC84A');
@@ -21,7 +31,8 @@ const BEER = {
 };
 
 paper
-  .rect(75, 175, 250, 350, 10, 10).attr(BEER);
+  .rect(75, 175, 250, 350, 10, 10)
+  .attr(BEER);
 
 // head
 const HEAD = { fill: '#fff' };
@@ -64,3 +75,22 @@ paper
   .animate({
     height: 250
   }, 60000);
+
+// bubbles
+const BUBBLE = {
+  fill: 'rgba(255, 255, 255, 0.5)'
+};
+
+setInterval(() => {
+
+  paper
+    .circle(150 + (~~(Math.random() * 150)), 525, 1)
+    .animate({
+      r: ~~(Math.random(10) * 10)
+    }, 2000)
+    .animate({
+      cy: 150
+    }, 5000)
+    .attr(BUBBLE);
+
+}, 1500);
