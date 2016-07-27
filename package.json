@@ -1,8 +1,8 @@
 {
   "name": "beer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Just a simple jar of sparkling beer ;)",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/BaggersIO/beer.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Peter Müller <peter@baggersio>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BaggersIO/beer/issues"
   },
