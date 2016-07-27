@@ -83,14 +83,17 @@ const BUBBLE = {
 
 setInterval(() => {
 
-  paper
+  let bubble = paper
     .circle(150 + (~~(Math.random() * 150)), 525, 1)
     .animate({
       r: ~~(Math.random(10) * 10)
     }, 2000)
     .animate({
       cy: 150
-    }, 5000)
+    }, 5000, null, () => {
+
+      bubble.remove();
+    })
     .attr(BUBBLE);
 
 }, 1500);
