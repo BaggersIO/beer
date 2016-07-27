@@ -8,7 +8,8 @@ const GLASS = {
   strokeWidth: 40
 };
 
-paper.rect(50, 150, 300, 400, 10, 10).attr(GLASS);
+paper
+  .rect(50, 150, 300, 400, 10, 10).attr(GLASS);
 
 // beer
 const LIQUID = paper.gradient('l(0, 0, 1, 1)#EFC84A-#EFC84A');
@@ -19,7 +20,8 @@ const BEER = {
   strokeWidth: 25
 };
 
-paper.rect(75, 175, 250, 350, 10, 10).attr(BEER);
+paper
+  .rect(75, 175, 250, 350, 10, 10).attr(BEER);
 
 // head
 const HEAD = { fill: '#fff' };
@@ -43,3 +45,22 @@ const HEAD = { fill: '#fff' };
 ].forEach(coords => paper.circle(...coords).attr(HEAD));
 
 // muck
+const MUCK = {
+  fill: '#fff',
+  stroke: '#fff',
+  strokeWidth: 25
+};
+
+paper
+  .rect(200, 150, 1, 30, 10, 10)
+  .attr(MUCK)
+  .animate({
+    height: 300
+  }, 30000);
+
+paper
+  .rect(250, 150, 1, 30, 10, 10)
+  .attr(MUCK)
+  .animate({
+    height: 250
+  }, 60000);
